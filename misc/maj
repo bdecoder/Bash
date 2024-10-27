@@ -1,0 +1,19 @@
+#!/bin/bash 
+echo -n "Voulez-vous faire les mises a jour de votre machine (yes/no)"
+read result
+ if [ "$result" = "yes" ]; then
+  clear
+  sudo apt update
+  sudo apt upgrade
+  sudo apt dist-upgrade
+  clear
+  echo "mises a jour terminées"
+  sleep 1
+  clear
+ elif [ "$result" = "no" ]; then
+  echo "d'accord, bonne journée"
+  sleep 1
+  clear
+ else
+  echo "choix invalide"
+ fi

@@ -1,0 +1,24 @@
+#!/bin/bash
+echo -n "username: "
+read username
+echo -n "repository name: "
+read reponame
+echo -n "enter the full path to the repo: "
+read path
+echo "Ok, please wait few seconds pls"
+cd $path
+clear
+echo "this files will be modified: "
+git status
+echo -n "is this correct (yes/no): "
+read response
+ if [ "$response" = "yes" ]; then
+  git add .
+  git commit -m "repository update"
+  git push origin main
+ elif [ "$result" = "no" ]; then
+  echo "No problem, have a good day and enjoy"
+  clear
+ else
+  echo "Incorrect selection. Please type yes or no."
+ fi

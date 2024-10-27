@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -n "votre adresse ip externe est: "
+curl ifconfig.me
+echo ""
