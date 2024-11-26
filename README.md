@@ -1,18 +1,19 @@
 # Bash
 All my bash projects
+
 ## Wipe.sh
-Wipe.sh permet de totalement ''tuer'' un ordinateur.
+Wipe.sh allows you to totally "kill" a computer.
 
-Lors de l'éxecution de ce script, plusieurs choses vont arriver:
-1) extinction de toute communication réseau
-2) bloquage de tout les ports
-3) désactivation des ports usb lors du reboot
-4) désactivation de tout mode de communication avec la machine
-5) désactivation de la fonction de mise en veille
-6) wipe de tout les dossiers importants (4 tours)
-7) mise en place d'un redémarage automatique lors du boot de l'ordinateur
-8) extinction de l'ordinateur
+When running this script, several things will happen: 
+1) Turning off all network communication
+2) Blocking of all ports
+3) Disabling the USB ports during reboot
+4) disabling any mode of communication with the machine
+5) Disable the sleep function
+6) wipe all important files (4 rounds)
+7) Setting up an automatic restart when booting the computer
+8) Computer shutdown
 
-Pour installer ce script, il faudra lancer cette commande:
+To install this script, you will need to run this command:
 
 `sudo apt install shred xinput xset ufw nmcli -y`
