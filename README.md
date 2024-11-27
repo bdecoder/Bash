@@ -1,5 +1,5 @@
-# Bash
-All my bash projects
+# OPSEC
+This category will focus on OPSEC scripts, which have a range of goals, all aimed at ensuring the security of your computer against potential attackers.
 
 ## Wipe.sh
 Wipe.sh allows you to totally "kill" a computer.
