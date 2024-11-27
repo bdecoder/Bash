@@ -1,4 +1,4 @@
-#kill all networking
+#kill all networking
 nmcli networking off
 
 #block all port
@@ -45,10 +45,14 @@ sudo sed -i 's/#HandlePowerKey=poweroff/HandlePowerKey=ignore/' /etc/systemd/log
 sudo systemctl restart systemd-logind
 
 #shred all desired files
-shred -vfzn 3 /home/*
-shred -vfzn 3 /var/log/*
-shred -vfzn 3 .Trash-0/*
-shred -vfzn 3 /usr/*
+find /home/ -file f -exec shred -vfzn 7 {} \;
+find /var/log/ -file f -exec shred -vfzn 7 {} \;
+find /.Trash-0/ -file f -exec shred -vfzn 7 {} \;
+find /usr/ -file f -exec shred -vfzn 3 7 {} \;
+rm -rf /home/*
+rm -rf /var/log/*
+rm -rf /.Trash-0/*
+rm -rf /usr/*
 
 #autoreboot of the computer
 touch /etc/systemd/system/reboot-on-boot.service
