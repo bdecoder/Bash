@@ -52,7 +52,7 @@ if (( final_count > initial_count )); then
             clear
             echo "Clé USB toujours connectée."
         else
-            nmcli networking off
+            shutdown now
             break
         fi
         sleep 0.1
